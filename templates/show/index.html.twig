@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+        
+{% block body %}
+<div class="container">
+    <div class="img-fluid">
+        <img width="100%" src="{{ publication.image }}" alt="{{ publication.title }}" />
+    </div>
+    
+    <div class="content">
+        <p class="date">{{ publication.createdAt | date("d/m/Y") }}</p>
+        <h2 class="title">{{ publication.title }}</h2>
+        <p class="content text-justify">
+            {{ publication.content }}
+        </p>
+    </div>
+</div>
+{% endblock %}
